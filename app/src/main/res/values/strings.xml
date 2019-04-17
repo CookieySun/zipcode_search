@@ -1,4 +1,4 @@
 <resources>
-    <string name="app_name">Zipcode Search</string>
+    <string name="app_name">郵便番号検索</string>
     <string name="hyphen">-</string>
 </resources>
