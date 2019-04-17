@@ -1,19 +1,16 @@
 package kktyu.xyz.zipcode_search
 
-import android.content.Context
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.text.Editable
 import android.text.TextWatcher
 import android.util.Log
-import android.view.inputmethod.InputMethodManager
 import com.eclipsesource.json.Json
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
-
 
 class MainActivity : AppCompatActivity() {
 
@@ -57,7 +54,7 @@ class MainActivity : AppCompatActivity() {
                 for (addresses in result.get("results").asArray()) {
                     val address = addresses.asObject()
                     resultText += (address.get("address1").toString() + address.get("address2").toString() + address.get(
-                            "address3"
+                        "address3"
                     ).toString()).replace("\"", "") + "%n"
                     Log.i("getAddress", result.toString())
                 }
