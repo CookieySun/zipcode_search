@@ -53,10 +53,10 @@ class MainActivity : AppCompatActivity() {
                 var resultText: String = ""
                 for (addresses in result.get("results").asArray()) {
                     val address = addresses.asObject()
-                    resultText += (address.get("address1").toString() + address.get("address2").toString() + address.get(
-                        "address3"
-                    ).toString()).replace("\"", "") + "%n"
-                    Log.i("getAddress", result.toString())
+                    resultText += (address.get("address1").toString()
+                            + address.get("address2").toString()
+                            + address.get("address3").toString())
+                        .replace("\"", "") + "%n"
                 }
                 resultView.text = resultText.format()
             } else {
