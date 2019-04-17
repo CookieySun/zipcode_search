@@ -8,15 +8,18 @@
 
     <EditText
         android:id="@+id/firstHalfNumber"
-        android:layout_width="99dp"
+        android:layout_width="64dp"
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
         android:ems="10"
+        android:gravity="end"
         android:inputType="number"
+        android:maxLength="3"
         app:layout_constraintBottom_toBottomOf="@+id/hyphen"
         app:layout_constraintEnd_toStartOf="@+id/hyphen"
-        app:layout_constraintTop_toTopOf="@+id/hyphen" />
+        app:layout_constraintTop_toTopOf="@+id/hyphen"
+        tools:text="123" />
 
     <TextView
         android:id="@+id/hyphen"
@@ -27,50 +30,41 @@
         android:layout_marginTop="64dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
+        android:layout_marginBottom="8dp"
+        android:maxLength="4"
         android:text="@string/hyphen"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.19999999" />
 
     <EditText
         android:id="@+id/secondHalfNumber"
-        android:layout_width="120dp"
+        android:layout_width="64dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
         android:ems="10"
         android:inputType="number"
+        android:maxLength="4"
         app:layout_constraintBottom_toBottomOf="@+id/hyphen"
         app:layout_constraintStart_toEndOf="@+id/hyphen"
-        app:layout_constraintTop_toTopOf="@+id/hyphen" />
-
-    <Button
-        android:id="@+id/button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginTop="128dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
-        android:text="Button"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/hyphen" />
+        app:layout_constraintTop_toTopOf="@+id/hyphen"
+        tools:text="4567" />
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/resultView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="64dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
-        android:layout_marginBottom="8dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button" />
-
+        app:layout_constraintTop_toBottomOf="@+id/hyphen"
+        tools:text="1234567" />
 </android.support.constraint.ConstraintLayout>
